@@ -1,0 +1,21 @@
+import test from "@playwright/test"
+test("Create Lead", async({page}) => {
+await page.goto("http://leaftaps.com/opentaps/control/main")   
+await page.locator("#username").fill("Demosalesmanager")        
+await page.locator("#password").fill("crmsfa")                   
+await page.locator(".decorativeSubmit").click()                  
+await page.locator(`text='CRM/SFA'`).click()                     
+await page.locator(`text='Leads'`).click()                       
+await page.locator('//a[text()="Create Lead"]').click()                 
+await page.locator("#createLeadForm_companyName").fill("TestLeaf") 
+await page.locator("#createLeadForm_firstName").fill("Brindha")    
+await page.locator("#createLeadForm_lastName").fill("Manian")            
+await page.locator("#createLeadForm_personalTitle").fill("MRS")       
+await page.locator("#createLeadForm_generalProfTitle").fill("TEster") 
+await page.locator("#createLeadForm_annualRevenue").fill("50000")   
+await page.locator("#createLeadForm_departmentName").fill("QA")       
+await page.locator("#createLeadForm_primaryPhoneNumber").fill("9940957079")
+await page.locator(".smallSubmit").click()                        
+await page.waitForTimeout(5000)
+
+})
