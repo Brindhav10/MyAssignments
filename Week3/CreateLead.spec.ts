@@ -16,6 +16,7 @@ await page.locator("#createLeadForm_annualRevenue").fill("50000")
 await page.locator("#createLeadForm_departmentName").fill("QA")       
 await page.locator("#createLeadForm_primaryPhoneNumber").fill("9940957079")
 await page.locator(".smallSubmit").click()                        
-await page.waitForTimeout(5000)
+
+
 
 })
